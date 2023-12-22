@@ -1,0 +1,22 @@
+.App{
+  margin-inline: 1rem;
+  margin-top: 1rem;
+  .dark-theme {
+    height: 2rem;
+    cursor: pointer;
+    font-size: 24px;
+    display: relative;
+    left: 1rem;
+    color: var(--color-dark);
+    transition: color 0.3s;
+    padding-right: 1rem;
+
+    .mode{
+      float: right;
+    }
+  }
+  
+  .dark-theme:hover {
+    color: var(--color-primary);
+  }
+}

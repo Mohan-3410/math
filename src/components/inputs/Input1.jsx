@@ -26,7 +26,7 @@ function Input1() {
   };
 
   return (
-    <>
+    <div>
       <form onSubmit={handleSubmit}>
         <table >
           <thead>
@@ -73,7 +73,7 @@ function Input1() {
 
       </form>
       {isMean && <Mean tableData={tableData} />}
-    </>
+    </div>
   );
 }
 

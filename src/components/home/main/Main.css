@@ -1,0 +1,17 @@
+main {
+  margin-top: 1.4rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+}

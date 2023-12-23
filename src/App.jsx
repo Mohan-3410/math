@@ -4,22 +4,22 @@ import { FiSun, FiMoon } from 'react-icons/fi';
 import Input1 from "./components/inputs/Input1"
 import Simpson3_8rule from "./components/integration/Simpson3_8rule"
 import "./App.scss";
-
+import Home from './components/home/Home';
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('dark-theme-variables', isDarkMode)
-  };
+  
 
   return (
     <div className="App">
-      <div className="dark-theme" onClick={toggleDarkMode}>
-        <div className="mode">{isDarkMode ? <FiSun /> : <FiMoon />}</div>
+      <BrowserRouter>
+      <Home />
+      </BrowserRouter>
+      
+      {/* <div className="dark-theme">
+        <div className="mode"  onClick={toggleDarkMode}>{isDarkMode ? <FiSun /> : <FiMoon />}</div>
       </div>
-      <Simpson3_8rule />
+      <Simpson3_8rule /> */}
       {/* <Input1 /> */}
     </div>
   )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Mean from '../statistics/Mean';
-import "./Input1.css"
+import "./Input1.scss"
 
 function Input1() {
   const [tableData, setTableData] = useState([Array.from({ length: 2 }, () => '')]);
@@ -26,7 +26,7 @@ function Input1() {
   };
 
   return (
-    <div>
+    <div className='Input1'>
       <form onSubmit={handleSubmit}>
         <table >
           <thead>

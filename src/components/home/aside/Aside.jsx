@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Aside.css"
 import { NavLink } from 'react-router-dom';
 import { InlineMath } from 'react-katex'
+import { sumTransformDependencies } from 'mathjs';
 
 function Aside() {
     const handleClose = () => {
         document.querySelector("aside").style.display="none"
     }
+    
     return (
         <aside>
             <div class="top">
@@ -14,7 +16,7 @@ function Aside() {
                     <h2 className="danger"><InlineMath math='\mathbf{\sum}' /></h2>
                     <h2>CODE<span class="danger">X</span></h2>
                 </div>
-                <div class="close" id="close-btn" onClick={handleClose}>
+                <div class="close" id="close-btn"  onClick={handleClose}>
                     <span class="material-icons-sharp"> close </span>
                 </div>
             </div>

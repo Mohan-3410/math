@@ -11,6 +11,7 @@ main {
 @media screen and (max-width: 768px) {
 
   main {
+    position: unset;
     margin-top: 8rem;
     padding: 0 1rem;
   }

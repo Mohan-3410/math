@@ -6,10 +6,21 @@
     border: 1px solid var(--color-primary);
     border-radius: var(--border-radius-2);
     margin-bottom: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
   .toggle-btn {
-    display: block;
-    margin-bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
+    margin-block: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.5rem;
     font-size: 16px;
     cursor: pointer;
@@ -21,7 +32,6 @@
 
   .buttons {
     display: none;
-    // display: grid;
     
   }
   .buttons.visible{
@@ -72,8 +82,9 @@
     cursor: pointer;
     box-shadow: var(--box-shadow);
     grid-column: span 1;
-  }
-  button > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-dark);
   }
 
@@ -82,7 +93,12 @@
   }
 
   button:active {
-    background-color: var(--color-dark);
+    background-color: var((--color-white));
+  }
+
+  .function-popup{
+    height: 15rem;
+    overflow-y: auto;
   }
 }
 

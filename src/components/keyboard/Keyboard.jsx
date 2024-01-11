@@ -5,17 +5,20 @@ import { InlineMath } from 'react-katex';
 import './Keyboard.scss';
 import FunctionButtons from './FunctionButtons';
 
-const Keyboard = () => {
-  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
-
+const Keyboard = ({ onKeyPress }) => {
+  const [isKeyboardVisible, setKeyboardVisible] = useState(true);
   const [isFuncPopupVisible, setFuncPopupVisible] = useState(false);
 
+
+
   const handleClick = (value) => {
-    // Handle button click (you can implement your logic here)
-    console.log(`keyboard Button clicked: ${value}`);
     if (value === 'func') {
       setFuncPopupVisible(true);
+      return;
     }
+
+    console.log(`Keyboard Button clicked: ${value}`);
+    onKeyPress(value);
   };
 
   const toggleKeyboardVisibility = () => {
@@ -89,13 +92,13 @@ const Keyboard = () => {
               <button onClick={() => handleClick('<-')}><InlineMath math="\leftarrow" /></button>
               <button onClick={() => handleClick('->')}><InlineMath math="\rightarrow" /></button>
             </div>
-            <button onClick={() => handleClick('X')}><span class="material-icons-sharp">backspace</span></button>
-            <button onClick={() => handleClick('Enter')}><span class="material-icons-sharp">keyboard_return</span></button>
+            <button onClick={() => handleClick('x')}><span className="material-icons-sharp">backspace</span></button>
+            <button onClick={() => handleClick('Enter')}><span className="material-icons-sharp">keyboard_return</span></button>
           </div>
         </div>
       </div>
       <div className="toggle-btn" onClick={toggleKeyboardVisibility}>
-        {isKeyboardVisible ? <span class="material-icons-sharp">expand_more</span> : <span class="material-icons-sharp">expand_less</span>}
+        {isKeyboardVisible ? <span className="material-icons-sharp">expand_more</span> : <span className="material-icons-sharp">expand_less</span>}
       </div >
       {isFuncPopupVisible && (
         <div className="function-popup">
@@ -113,7 +116,7 @@ const Keyboard = () => {
           />
           <FunctionButtons
             category="Logarithmic"
-            functions={['\\log', '\\ln', '\\cos', '\\sin']}
+            functions={['\\log', '\\ln']}
             onClick={handleClick}
             onClose={closeFuncPopup}
           />

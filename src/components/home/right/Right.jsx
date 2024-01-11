@@ -10,25 +10,25 @@ export default function Right() {
         document.body.classList.toggle('dark-theme-variables', isDarkMode)
     };
     const handleMenuBar = () => {
-        document.querySelector("aside").style.display="block"
+        document.querySelector("aside").style.display = "block"
     }
 
     return (
-        <div class="Right">
-            <div class="top">
+        <div className="Right">
+            <div className="top">
                 <button id="menu-btn">
-                    <span class="material-icons-sharp" onClick={handleMenuBar}>menu</span>
+                    <span className="material-icons-sharp" onClick={handleMenuBar}>menu</span>
                 </button>
-                <div class="theme-toggler" onClick={toggleDarkMode}>
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
+                <div className="theme-toggler" onClick={toggleDarkMode}>
+                    <span className="material-icons-sharp active">light_mode</span>
+                    <span className="material-icons-sharp">dark_mode</span>
                 </div>
-                <div class="profile">
-                    <div class="info">
+                <div className="profile">
+                    <div className="info">
                         <p>Hey, <b>Mohan</b></p>
-                        <small class="text-muted">Admin</small>
+                        <small className="text-muted">Admin</small>
                     </div>
-                    <div class="profile-photo">
+                    <div className="profile-photo">
                         <img src={dummyImg} alt="" />
                     </div>
                 </div>
